@@ -4,12 +4,12 @@ go 1.24.3
 
 // version should be update
 require (
-	github.com/HashemJaafar7/testutils v0.1.7
+	github.com/HashemJaafar7/testutils v0.1.8
 )
 
 // For local development
 replace (
-	github.com/HashemJaafar7/testutils => ../testutils
+// github.com/HashemJaafar7/testutils => ../testutils
 )
 
 require (
