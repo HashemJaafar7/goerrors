@@ -1,7 +1,17 @@
-module github.com/HashemJaafar7/atoErr
+module github.com/HashemJaafar7/goerrors
 
 go 1.24.3
 
-require github.com/HashemJaafar7/go_test v0.1.6
+// version should be update
+require (
+	github.com/HashemJaafar7/testutils v0.1.7
+)
 
-require github.com/google/gofuzz v1.2.0 // indirect
+// For local development
+replace (
+	github.com/HashemJaafar7/testutils => ../testutils
+)
+
+require (
+	github.com/google/gofuzz v1.2.0 // indirect
+)
