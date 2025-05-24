@@ -12,6 +12,7 @@
 package goerrors
 
 import (
+	"errors"
 	"fmt"
 	"runtime/debug"
 	"strings"
@@ -100,4 +101,15 @@ func GetStack(err error) string {
 		return err.stack
 	}
 	return ErrorInvalidErrorType
+}
+
+func YouShouldNotHavePanicHere() {
+	panic("you should not have panic here")
+}
+
+func NormalizeTheError(err error) error {
+	if err != nil {
+		return errors.New(err.Error())
+	}
+	return nil
 }
